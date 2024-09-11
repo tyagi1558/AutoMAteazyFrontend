@@ -1,0 +1,69 @@
+<div class="center-wrapper overflow-y-auto">
+  <div class="flex flex-wrap shadow-2 lg:w-9 mx-2 lg:mx-0 border-round-3xl  ">
+    <div class="flex-column w-full lg:w-6 p-6 px-4 py-4 lg:p-7 temp-background hidden lg:flex">
+      
+      <div class="h-full w-full flex align-items-center justify-content-center">
+        <img src='./assets/img/loginImage.png' alt="Image" class="w-full" />
+      </div>
+      
+    </div>
+    <div class="w-full lg:w-6 p-6 lg:p-7 surface-card border-round-3xl lg:border-noround">
+      <div class="flex align-items-center justify-content-between mb-7">
+        <span class="text-5xl font-medium text-900">Login to
+          <span class="login-title">Automateazy</span>
+        </span>
+      </div>
+      <p-divider align="center" styleclass="my-4">
+        <div role="separator" class="my-4 p-divider p-component p-divider-horizontal p-divider-solid p-divider-center">
+          <div class="p-divider-content">
+            <span class="text-600 font-normal text-sm">Please enter your credentials</span>
+          </div>
+        </div>
+      </p-divider>
+      <form class="my-form" role="form" [formGroup]="loginForm">
+        <label for="username4" class="block text-900 font-medium mb-2">Username</label>
+        <div>
+          <input
+            id="username4"
+            type="text"
+            placeholder="Email address"
+            class="p-inputtext p-component w-full mb-3 p-3"
+            formControlName="username"
+          />
+          <div *ngIf="loginForm.get('username')?.touched && loginForm.get('username')?.errors">
+            <p *ngIf="loginForm.get('username')?.errors?.['required']" class="errMsg">
+              *Username is required
+            </p>
+            <p *ngIf="loginForm.get('username')?.errors?.['email']" class="errMsg">
+              *Invalid email address
+            </p>
+          </div>
+          
+        </div>
+        <label for="password4" class="block text-900 font-medium mb-2">Password</label>
+        <div>
+          <input
+            id="password4"
+            type="password"
+            placeholder="Password"
+            class="p-inputtext p-component w-full mb-3 p-3"
+            formControlName="password"
+          />
+          <div *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.errors">
+            <p *ngIf="loginForm.get('password')?.errors?.['required']" class="errMsg">
+              *Password is required
+            </p>
+            <p *ngIf="loginForm.get('password')?.errors?.['minlength']" class="errMsg">
+              Password should be minimum 6 characters
+            </p>
+          </div>
+        </div>
+     
+        <div>
+          <p-button label="Sign In" [loading]="isLoginButtonLoading" (onClick)="login()" icon="pi pi-user" styleClass="login-button w-full"></p-button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<p-toast />

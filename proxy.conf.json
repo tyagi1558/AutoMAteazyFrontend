@@ -1,0 +1,9 @@
+{
+    "/api": {
+      "target": "https://dev-cc.automateazy.com",
+      "secure": false,
+      "changeOrigin": true,
+      "logLevel": "debug"
+    }
+  }
+  

@@ -1,0 +1,64 @@
+
+<app-topbar class="fixed top-0 left-0 z-5 w-full" (linkClicked)="handleLinkClick($event)" [activeTab]="activeTab"></app-topbar>
+<div class="grid p-3 mt-8">
+<div class="card col-12 md:p-3">
+
+
+  <p-table
+  [value]="leads[activeTab].data"
+  [lazy]="true"
+  [rows]="10"
+  [paginator]="true"
+  [rowsPerPageOptions]="[10,20,50]"
+  [totalRecords]="leads[this.activeTab].count"
+  (onPage)="fetchLeadsOnPageChange($event)"
+  [loading]="isLoading"
+  [first]="leads[activeTab].first"
+  [rows]="leads[activeTab].row"
+>
+<ng-template pTemplate="caption">
+  <div class="flex flex-wrap align-items-center justify-content-between">
+      <div class="flex flex-wrap align-items-center justify-content-between">
+        <h5 *ngIf="activeTab=='all'" class="m-0 font-bold text-primary mr-5">All Leads</h5>
+        <h5 *ngIf="activeTab=='fav'"class="m-0 font-bold text-primary mr-5">Favorite Leads</h5>
+        <h5 *ngIf="activeTab=='untouch'"class="m-0 font-bold text-primary mr-5">Untouched Leads</h5>
+        <p-inputGroup class="ml-0 mt-4">
+          <input type="text" pInputText placeholder="Search" [(ngModel)]="leads[this.activeTab].lastSearch" />
+          <button type="button" pButton label="Search" (click)="search()"></button>
+          <button *ngIf="leads[this.activeTab].lastSearch" type="button" pButton icon="pi pi-times" class="p-button-help" (click)="resetSearch()"></button>
+
+      </p-inputGroup></div>
+      
+  <p-button class="m-1 ml-0 mt-2" *ngIf="activeTab=='all'"
+  label="Add New" (click)="showForm()"
+  icon="pi pi-plus" />
+  </div>
+
+</ng-template>
+<ng-template pTemplate="header">
+  <tr>
+      <th style="width:25%">Lead ID</th>
+      <th style="width:25%">Name</th>
+      <th style="width:25%">Phone</th>
+      <th style="width:25%">Email</th>
+      <th style="width:25%">Lead Priority</th>
+      <th style="width:25%">Lead Type</th>
+
+  </tr>
+</ng-template>
+<ng-template pTemplate="body" let-item>
+  <tr>
+    <td>{{ item?.id }}</td>
+
+      <td>{{ item?.name }}</td>
+      <td>{{ item?.phone }}</td>
+      <td>{{ item?.email }}</td>
+      <td>{{ item?.priority }}</td>
+
+      <td>{{ item?.lead_type }}</td>
+  </tr>
+</ng-template>
+</p-table>
+
+</div>
+</div>

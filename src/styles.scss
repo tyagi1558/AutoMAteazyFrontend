@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "primeng/resources/themes/mdc-light-deeppurple/theme.css";
+ 
+@import "primeng/resources/primeng.css";
+@import "primeflex/primeflex.css";
+// @import "src/assets/layout/styles/layout/layout.scss";
+@import "primeicons/primeicons.css";
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.menuActive {
+    border-color: var(--primary-color) !important;
+    color:var(--primary-color)
+  }
