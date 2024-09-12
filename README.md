@@ -1,27 +1,49 @@
-# LeadManagement
+# Automateazy Task
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.3.
+## Overview
 
-## Development server
+This project implements a Leads Management System using Angular. The system interacts with APIs from a provided Postman collection, featuring key functionalities such as:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features
 
-## Code scaffolding
+- **Login**: Allows users to log in using their credentials.
+  Includes form validation for email and password.
+  Displays error messages for incorrect credentials..
+- **Displaying All Leads**: Displays a list of all leads post-login.
+Information includes Lead ID, Name, Phone, Email, Priority, Type, and Owner.
+Pagination is implemented for easy navigation through leads.
+- **Managing Favorite and Untouched Leads**: Allows users to mark and display their favorite leads, Lists leads that haven't been interacted with yet.
+- **Searching for Leads**: A search bar that allows users to find specific leads using the provided API.
+- **Adding New Leads**: A form to add new leads, with validation.
+Dynamic dropdowns for source and college lists populated from API.
+## Technologies Used
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Angular**
+- **PrimeNg**
+- **Design**
+- **API Integration**
+- **Responsive**
 
-## Build
+## How to Run the Project
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- **Prerequisites**
+- **Node.js (v12 or higher)**
+- **Angular CLI**
 
-## Running unit tests
+## Installation
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/tyagi1558/AutoMAteazyFrontend.git
+   
 
-## Running end-to-end tests
+2. **Install dependencies:**:
+   ```bash
+   npm install
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+3. **Start the server:**
 
-## Further help
+   ```bash
+   ng serve
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+The server will start on http://localhost:4200 by default.
