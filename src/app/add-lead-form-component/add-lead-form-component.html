@@ -1,6 +1,6 @@
 
     <div class="surface-card border-round">
-        <div class="flex flex-column gap-3 w-25rem">
+        <div class="flex flex-column gap-3 md:max-md:max-w-30rem w-screen max-w-17rem w-screen max-w-17rem">
             <form [formGroup]="leadForm" (ngSubmit)="saveLead()">
               <!-- Name -->
               <div>
@@ -10,7 +10,7 @@
                     pInputText
                     formControlName="name"
                     placeholder="Name"
-                    class="w-30rem"
+                    class="md:max-w-30rem w-screen max-w-17rem"
                     type="text"
                   />
                 </p-inputGroup>
@@ -27,7 +27,7 @@
                     pInputText
                     formControlName="email"
                     placeholder="Email"
-                    class="w-30rem"
+                    class="md:max-w-30rem w-screen max-w-17rem"
                     type="email"
                   />
                 </p-inputGroup>
@@ -44,7 +44,7 @@
                     pInputText
                     formControlName="phone"
                     placeholder="Phone Number"
-                    class="w-30rem"
+                    class="md:max-w-30rem w-screen max-w-17rem"
                     type="tel"
                   />
                 </p-inputGroup>
@@ -61,7 +61,7 @@
                     pInputText
                     formControlName="alt_phone"
                     placeholder="Alternate Phone Number"
-                    class="w-30rem"
+                    class="md:max-w-30rem w-screen max-w-17rem"
                     type="tel"
                   />
                 </p-inputGroup>
@@ -77,7 +77,7 @@
                     placeholder="Select Country"
                     optionLabel="name"
                     optionValue="value"
-                    styleClass="w-25rem"
+                    styleClass="md:max-md:max-w-30rem w-screen max-w-17rem w-screen max-w-17rem"
                                       ></p-dropdown>
                 </div>
                 <div *ngIf="leadForm.get('country')?.invalid && leadForm.get('country')?.touched" class="error">
@@ -94,7 +94,7 @@
                     [formControlName]="'state'"
                     [options]="states"
                     placeholder="Select State"
-                    styleClass="w-25rem"                  ></p-dropdown>
+                    styleClass="md:max-md:max-w-30rem w-screen max-w-17rem w-screen max-w-17rem"                  ></p-dropdown>
                 </div>
                 <div *ngIf="leadForm.get('state')?.invalid && leadForm.get('state')?.touched" class="error">
                   State is required
@@ -111,7 +111,7 @@
                     placeholder="Select College"
                     optionLabel="name"
                     optionValue="id"
-                    styleClass="w-25rem"                  ></p-dropdown>
+                    styleClass="md:max-md:max-w-30rem w-screen max-w-17rem w-screen max-w-17rem"                  ></p-dropdown>
                 </div>
                 
                 <div *ngIf="leadForm.get('clg_id')?.invalid && leadForm.get('clg_id')?.touched" class="error">
@@ -127,7 +127,7 @@
                     [formControlName]="'stream'"
                     [options]="streams"
                     placeholder="Select Stream"
-                    styleClass="w-25rem"                  ></p-dropdown>
+                    styleClass="md:max-md:max-w-30rem w-screen max-w-17rem w-screen max-w-17rem"                  ></p-dropdown>
                 </div>
                 <div *ngIf="leadForm.get('stream')?.invalid && leadForm.get('stream')?.touched" class="error">
                   Stream is required
@@ -142,7 +142,7 @@
                     [formControlName]="'year_of_admission'"
                     [options]="years"
                     placeholder="Select Year"
-                    styleClass="w-25rem"                  ></p-dropdown>
+                    styleClass="md:max-md:max-w-30rem w-screen max-w-17rem w-screen max-w-17rem"                  ></p-dropdown>
                 </div>
                 <div *ngIf="leadForm.get('year_of_admission')?.invalid && leadForm.get('year_of_admission')?.touched" class="error">
                   Year of admission is required
@@ -157,7 +157,7 @@
                     [formControlName]="'source'"
                     [options]="sources"
                     placeholder="Select Source"
-                    styleClass="w-25rem"                  ></p-dropdown>
+                    styleClass="md:max-md:max-w-30rem w-screen max-w-17rem w-screen max-w-17rem"                  ></p-dropdown>
                 </div>
                 <div *ngIf="leadForm.get('source')?.invalid && leadForm.get('source')?.touched" class="error">
                   Source is required
@@ -174,7 +174,7 @@
                     placeholder="Select Counsellor"
                     optionLabel="name"
                     optionValue="id"
-                    styleClass="w-25rem"                  ></p-dropdown>
+                    styleClass="md:max-md:max-w-30rem w-screen max-w-17rem w-screen max-w-17rem"                  ></p-dropdown>
                 </div>
                 <div *ngIf="leadForm.get('lead_type')?.invalid && leadForm.get('lead_type')?.touched" class="error">
                   Counsellor is required
