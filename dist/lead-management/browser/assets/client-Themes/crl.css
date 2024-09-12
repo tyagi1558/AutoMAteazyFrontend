@@ -1,0 +1,38 @@
+:root, body {
+    --primary-color: #292D85!important;;
+    --secondary-color: #D7D9EC !important;;
+    --primary-dark:    #AE6BC1!important;
+    --primary-vibrant: #0006ad !important;
+    --primary-vibrant-analogous: #31ACC7;
+    --text-color: #4b5563 !important;
+    --temp-bg-color: #f7f7f7 !important;
+    --surface-overlay: #fff !important;
+    --sidebar-shadow-color: 0px 4px 50px #d9dbfc !important;;
+    --highlight-shadow-color: 0px 4px 30px #999eff !important;;   /* 80 lightness */
+    --surface-hover: #f8f8fc !important;;
+    --card-shadow: 0px 4px 30px rgba(219, 221, 255, 0.54) !important;;
+    --tracking-color-requested: var(--primary-dark) !important;
+    --tracking-color-reached: var(--primary-vibrant) !important;
+    --tracking-color-canceled: var(--primary-vibrant-analogous)!important;
+    --menu-bg: var(--surface-overlay)!important;
+    --menuitem-text-color: var(--text-color)!important;
+    --menuitem-icon-color: var(--primary-color)!important;
+    --submenuitem-icon-color: var(--primary-dark)!important;
+    --sidebar-shadow: var(--sidebar-shadow-color)!important;
+    --popup-submenu-item-hover-bg-color: var(--surface-hover)!important;
+    --chart-data-color-primary: var(--primary-color)!important;
+    --chart-data-color-secondary: var(--secondary-color)!important;
+    --chart-data-color-ternary: var(--primary-dark)!important;
+    --login-button-color: var(--primary-color)!important;
+    --login-title-color: var(--primary-color)!important;
+    --icon-color:var(--secondary-color)!important;
+    --pie-color-one:#bc8a7b!important;
+    --pie-color-two:#e8d17d!important;
+    --pie-color-three: #e87b8b !important;
+    --pie-color-four: #e8aa7d !important;
+
+    --pie-color-five: #bca97b !important;
+
+    --pie-color-six :var(--secondary-color) !important;
+
+}

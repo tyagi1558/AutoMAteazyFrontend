@@ -1,0 +1,27 @@
+//
+// Shadows
+//
+
+// General styles
+[class*="shadow"] {
+  @if $enable-transitions {
+    transition: $transition-base;
+  }
+}
+
+// Size variations
+.shadow-sm--hover:hover {
+  box-shadow: $box-shadow-sm ;
+}
+
+.shadow--hover:hover {
+  box-shadow: $box-shadow ;
+}
+
+.shadow-lg--hover:hover {
+  box-shadow: $box-shadow-lg ;
+}
+
+.shadow-none--hover:hover {
+  box-shadow: none ;
+}

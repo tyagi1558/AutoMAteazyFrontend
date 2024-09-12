@@ -1,0 +1,195 @@
+.sidebar-header {
+    padding: 2.5rem 0 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+//463.3 //422
+.app-logo {
+    display: inline;
+
+    height: 35.38px;
+}
+.sidebar-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 18.2rem; /* Same width as sidebar */
+    background-color: var(--menu-bg);
+    padding-bottom: 1.3rem; /* Adjust padding as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+    img {
+         /* Ensure image takes full width */
+        display: inline;
+
+    height: 120px;
+    }
+}
+.layout-sidebar {
+    position: fixed;
+    transition: transform $transitionDuration, left $transitionDuration;
+    background-color: var(--menu-bg);
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 18.2rem;
+    border-right: var(--sidebar-border);
+    box-shadow: var(--sidebar-shadow);
+    display: flex;
+    flex-direction: column;
+}
+
+.layout-menu-container {
+    overflow: auto;
+    flex: 1;
+    
+    max-height: calc(100% - 8rem - 120px);
+}
+
+.layout-menu {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    .layout-root-menuitem {
+        >.layout-menuitem-root-text {
+            font-size: .857rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: var(--surface-400);
+
+        }
+
+        >a {
+            display: none;
+        }
+    }
+
+    a {
+        user-select: none;
+
+        &.active-menuitem {
+            >.layout-submenu-toggler {
+                transform: rotate(-180deg);
+            }
+
+            .layout-menuitem-text {
+                font-weight: 700;
+            }
+        }
+
+    }
+
+    li.active-menuitem {
+        >a {
+            .layout-submenu-toggler {
+                transform: rotate(-180deg);
+            }
+
+            .layout-menuitem-text {
+                font-weight: 700;
+            }
+        }
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+
+        a {
+            display: flex;
+            align-items: center;
+            position: relative;
+            outline: 0 none;
+            color: var(--menuitem-text-color);
+            cursor: pointer;
+            padding: .75rem 2rem;
+            transition: background-color $transitionDuration, box-shadow $transitionDuration;
+
+            .layout-menuitem-icon {
+                margin-right: .5rem;
+                color: var(--menuitem-icon-color);
+            }
+
+            .layout-submenu-toggler {
+                font-size: 75%;
+                margin-left: auto;
+                transition: transform $transitionDuration;
+            }
+
+            &.active-route {
+                font-weight: 700;
+                color: var(--menuitem-text-color);
+            }
+
+            &:hover {
+                background-color: var(--popup-submenu-item-hover-bg-color);
+
+            }
+
+            &:focus {
+                @include focused-inset();
+            }
+        }
+
+        ul {
+            overflow: hidden;
+            // border-radius: $borderRadius;
+
+
+            li {
+
+                a {
+                    font-size: 0.9rem;
+                    padding-left: 4rem;
+
+                    .layout-menuitem-icon {
+
+
+                        color: var(--submenuitem-icon-color) !important; //;
+                    }
+                }
+
+                li {
+                    a {
+                        padding-left: 6rem;
+                        .layout-menuitem-icon {
+
+
+                            color: var(--primary-color) !important; //;
+                        }
+                    }
+
+                    li {
+                        a {
+                            padding-left: 3.5rem;
+                        }
+
+                        li {
+                            a {
+                                padding-left: 4rem;
+                            }
+
+                            li {
+                                a {
+                                    padding-left: 4.5rem;
+                                }
+
+                                li {
+                                    a {
+                                        padding-left: 5rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

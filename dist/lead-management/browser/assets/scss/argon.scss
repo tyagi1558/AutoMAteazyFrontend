@@ -1,0 +1,321 @@
+/*!
+
+=========================================================
+* Argon Dashboard PRO Angular - v1.2.0
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/argon-dashboard-pro-angular
+* Copyright 2021 Creative Tim (https://www.creative-tim.com)
+
+* Coded by www.creative-tim.com
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+*/
+
+// Bootstrap functions
+
+// Bootstrap components
+
+
+@layer boots{
+    
+    @import "bootstrap/functions";
+ @import "bootstrap/mixins";
+ 
+ // Argon functions
+ @import "custom/functions";
+ @import "custom/variables";
+ @import "bootstrap/variables";
+ 
+ // Argon mixins
+ @import "custom/mixins";
+  
+     
+     
+     
+     
+     @import "bootstrap/root";
+ @import "bootstrap/reboot";
+ @import "bootstrap/type";
+ @import "bootstrap/images";
+ @import "bootstrap/code";
+ @import "bootstrap/grid";
+ @import "bootstrap/tables";
+ @import "bootstrap/forms";
+ @import "bootstrap/buttons";
+ @import "bootstrap/transitions";
+ @import "bootstrap/dropdown";
+ @import "bootstrap/button-group";
+ @import "bootstrap/input-group";
+ @import "bootstrap/custom-forms";
+ @import "bootstrap/nav";
+ @import "bootstrap/navbar";
+ @import "bootstrap/card";
+ @import "bootstrap/breadcrumb";
+ @import "bootstrap/pagination";
+ @import "bootstrap/badge";
+ @import "bootstrap/jumbotron";
+ @import "bootstrap/alert";
+ @import "bootstrap/progress";
+ @import "bootstrap/media";
+ @import "bootstrap/list-group";
+ @import "bootstrap/close";
+ @import "bootstrap/modal";
+ @import "bootstrap/tooltip";
+ @import "bootstrap/popover";
+ @import "bootstrap/carousel";
+ @import "bootstrap/utilities";
+ @import "bootstrap/print";
+ 
+ 
+ @import "custom/components";
+ @import "custom/utilities";
+ @import "custom/vendors";
+ 
+ // Angular changes
+ @import "angular/dropdowns";
+ @import "angular/navbar-vertical";
+ @import "angular/progressbar";
+ @import "angular/plugin-ngx-chips";
+ @import "angular/ngx-toastr";
+ @import "angular/mobius1-selectr";
+ @import "angular/tooltips";
+ @import "angular/plugin-ngx-datatable";
+ @import "angular/navbar-vertical";
+ @import "angular/vector-map";
+ 
+ @import "ngx-toastr/toastr-bs4-alert";
+ 
+ 
+ 
+ }
+ // Argon components
+ 
+ 
+ 
+ // PRIME NG 
+ 
+ @import "primeng/resources/themes/mdc-light-deeppurple/theme.css";
+ 
+ @import "primeng/resources/primeng.css";
+ @import "primeflex/primeflex.css";
+ @import "src/assets/layout/styles/layout/layout.scss";
+ @import "primeicons/primeicons.css";
+ 
+ 
+ 
+   body {
+     font-family: 'Poppins' !important;
+     -webkit-font-smoothing: antialiased !important;
+     -moz-osx-font-smoothing: grayscale!important;
+ }
+ 
+ :root {
+     font-family: 'Poppins',Roboto, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !important;
+     --font-family: 'Poppins',Roboto, "Helvetica Neue Light", "Helvetica Neue", Helvetica !important;
+     --primary-color: rgba(228, 104, 37, 1) !important;
+ 
+ }
+ #id{
+     max-width: 50rem;
+ }
+ 
+ .table td {
+      font-size: 0.9rem; 
+     white-space: none;
+ }
+ 
+ .card .table td  {
+      padding-left: 0rem; 
+      padding-right: 0rem; 
+      padding: 0.5rem;
+ }
+ 
+ .flex-order-7{order: 7;}
+ .flex-order-8{order: 8;}
+ .flex-order-9{order: 9;}
+ .flex-order-10{order: 10;}
+ .flex-order-11{order: 11;}
+ .flex-order-12{order: 12;}
+ .flex-order-13{order: 13;}
+ .flex-order-14{order: 14;}
+ .flex-order-15{order: 15;}
+ .flex-order-16{order: 16;}
+ .flex-order-17{order: 17;}
+ .flex-order-18{order: 18;}
+ .flex-order-19{order: 19;}
+ .flex-order-20{order: 20;}
+ .flex-order-21{order: 21;}
+ .flex-order-22{order: 22;}
+ .flex-order-23{order: 23;}
+ .flex-order-24{order: 24;}
+ .flex-order-25{order: 25;}
+ 
+ .flex-order-26{order: 26;}
+ .flex-order-27{order: 27;}
+ .flex-order-28{order: 28;}
+ 
+ 
+ 
+ @media screen and (min-width: 1200px) {
+     .xl\:flex-order-7 {
+     order: 7!important;
+ }
+ .xl\:flex-order-8 {
+     order: 8!important;
+ }
+ .xl\:flex-order-9 {
+     order: 9!important;
+ }
+ .xl\:flex-order-10 {
+     order: 10!important;
+ }
+ .xl\:flex-order-11 {
+     order: 11!important;
+ }
+ .xl\:flex-order-12 {
+     order: 12!important;
+ }
+ .xl\:flex-order-13 {
+     order: 13!important;
+ }
+ .xl\:flex-order-14 {
+     order: 14!important;
+ }
+ .xl\:flex-order-15 {
+     order: 15!important;
+ }
+ .xl\:flex-order-16 {
+     order: 16!important;
+ }
+ .xl\:flex-order-17 {
+     order: 17!important;
+ }
+ .xl\:flex-order-18 {
+     order: 18!important;
+ }
+ .xl\:flex-order-19 {
+     order: 19!important;
+ }
+ .xl\:flex-order-20 {
+     order: 20!important;
+ }
+ .xl\:flex-order-21 {
+     order: 21!important;
+ }
+ .xl\:flex-order-22 {
+     order: 22!important;
+ }
+ .xl\:flex-order-23 {
+     order: 23!important;
+ }
+ .xl\:flex-order-24 {
+     order: 24!important;
+ }
+ .xl\:flex-order-25 {
+     order: 25!important;
+ }
+ .xl\:flex-order-26 {
+     order: 26!important;
+ }
+ .xl\:flex-order-27 {
+     order: 27!important;
+ }
+ .xl\:flex-order-28 {
+     order: 28!important;
+ }
+ 
+ 
+ }
+ 
+ @media screen and (min-width: 768px) and (max-width:1199px) {
+     .md\:flex-order-7 {
+         order: 7!important;
+     }
+     .md\:flex-order-8 {
+         order: 8!important;
+     }
+     .md\:flex-order-9 {
+         order: 9!important;
+     }
+     .md\:flex-order-10 {
+         order: 10!important;
+     }
+     .md\:flex-order-11 {
+         order: 11!important;
+     }
+     .md\:flex-order-12 {
+         order: 12!important;
+     }
+     .md\:flex-order-13 {
+         order: 13!important;
+     }
+     .md\:flex-order-14 {
+         order: 14!important;
+     }
+     .md\:flex-order-15 {
+         order: 15!important;
+     }
+     .md\:flex-order-16 {
+         order: 16!important;
+     }
+     .md\:flex-order-17 {
+         order: 17!important;
+     }
+     .md\:flex-order-18 {
+         order: 18!important;
+     }
+     .md\:flex-order-19 {
+         order: 19!important;
+     }
+     .md\:flex-order-20 {
+         order: 20!important;
+     }
+     .md\:flex-order-21 {
+         order: 21!important;
+     }
+     .md\:flex-order-22 {
+         order: 22!important;
+     }
+     .md\:flex-order-23 {
+         order: 23!important;
+     }
+     .md\:flex-order-24 {
+         order: 24!important;
+     }
+     .md\:flex-order-25 {
+         order: 25!important;
+     }
+     .md\:flex-order-26 {
+         order: 26!important;
+     }
+     .md\:flex-order-27 {
+         order: 27!important;
+     }
+     .md\:flex-order-28 {
+         order: 28!important;
+     }
+ 
+   }
+ 
+   @media screen and (max-width:767px) {
+     .tile-margin{
+         margin-top: 1.5rem !important;
+       }
+ 
+       .tile-font{
+         font-size: 1rem !important;
+     }
+ 
+ } 
+ 
+ .tile-margin{
+     margin-top: 2rem;
+   }
+ 
+ .tile-font{
+     font-size: 1.125rem;
+ }
