@@ -219,15 +219,31 @@ import { MessageService } from 'primeng/api';
         // Form is valid, proceed with API call
         this.apiService.addLead(this.leadForm.value).subscribe({
           next: (response) => {
+            if (response && response.code == 200) {
+              this.messageService.add({ 
+                severity: 'success',        // Type of the message (success)
+                summary: 'Success',         // Title of the message
+                detail: 'Lead added successfully!'  // Detailed message
+            });
             // Handle successful response
             console.log('Lead added successfully:', response);
             this.ref.close(true)
+          } else {
+            if (response.code == 400) {
+              this.messageService.add({ severity: 'error', summary: 'Error', detail: response.message  });
+              this.ref.close(false)
+
+            } else {
+              this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Lead Adding Failed'  });
+              this.ref.close(false)
+
+            }
+        }
           },
           error: (error) => {
             // Handle error response
             console.error('Error saving lead:', error);
             this.ref.close(false)
-            this.messageService.add({ severity: 'error', summary: 'Error', detail: error });
 
           }
         });
